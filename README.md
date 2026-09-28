@@ -9,11 +9,17 @@ This lab focuses on understanding and analyzing the asymptotic behavior of algor
 Suppose $T(n)$ is the worst case running time of an algorithm with input size $n$, and we know that $T(n)$ is $\mathcal{O}(n^3)$ and $\Omega(n^2)$. For each of the following statements, determine whether it must be true, must be false, or could be either true or false. Give a brief justification for each. 
 
 1. $T(n)$ is $\mathcal{O}(n^2)$.
+Could be either as $\mathcal{O}(n^2)$ is smaller then $\mathcal{O}(n^3)$ and thus can still be an uper bound for any functions lower then $\mathcal(n^2)$
 2. $T(n)$ is $\Theta(n^3)$.
+Could be as it's in between $\mathcal{O}(n^3)$ and $\Omega(n^2)$
 3. $T(n)$ is $\Omega(n)$.
+Must be true becuase its lower then $\Omega(n^2)$
 4. $T(n)$ is $\Theta(n^{1.5})$.
+Must be false because it's outside of $\mathcal{O}(n^3)$ and $\Omega(n^2)$
 5. $T(n)$ is $\mathcal{O}(n)$.
+Must be false as it's lower then $\mathcal{O}(n^3)$
 6. $T(n)$ is $\Theta(n^2 \log n)$.
+Could be due to being in between $\mathcal{O}(n^3)$ and $\Omega(n^2)$
 
 
 ## Problem 2
@@ -31,3 +37,5 @@ Output: int sum
 ```
 
 Without knowing anything about $f$, what can we say about the running time of the Mystery Algorithm in terms of $n$? Justify your answer. 
+
+We can assume $\Omega(n^2)$ by assuming a constant running time of function f due to the two for loops of n. We can aslo assume $\mathcal{O}(n!)$ due to it being the largest running time. 
